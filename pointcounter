@@ -1,0 +1,48 @@
+#define left 10
+#define right 11
+//左の5個のLEDが0~4 右の5個のLEDが5~9
+//左のボタンが10 右のボタンが11
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  for(int i=0;i<10;i++)pinMode(i,OUTPUT);
+  pinMode(left,INPUT);
+  pinMode(right,INPUT);
+}
+int a=0,b=0;
+void loop() {
+  // put your main code here, to run repeatedly:
+  if(digitalRead(left)){
+    //ランプを一つづつ付けていく
+    digitalWrite(a,HIGH);
+    a++;
+  }
+  if(digitalRead(right)){
+    //ランプを一つづつ付けていく
+    digitalWrite(b+4,HIGH);
+    b++;
+  }
+  if(a==5){
+    //5点になったら点滅して全部消すコード
+    for(int k=0;k<10;i++){
+      rep(l,5)digitalWrite(l,LOw);
+      delay(60);
+      rep(l,5)digitalWrite(l,HIGH);
+      delay(60);
+    }
+    rep(l,5)digitalWrite(l,LOw);
+    rep(l,5)digitalWrite(l+4,LOw);
+  }
+  if(b==5){
+    //5点になったら点滅して全部消すコード
+    for(int k=0;k<10;i++){
+      rep(l,5)digitalWrite(l+4,LOw);
+      delay(60);
+      rep(l,5)digitalWrite(l+4,HIGH);
+      delay(60);
+    }
+    rep(l,5)digitalWrite(l,LOw);
+    rep(l,5)digitalWrite(l+4,LOw);
+  }
+  delay(1);
+}
