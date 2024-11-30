@@ -24,25 +24,25 @@ void loop() {
   }
   if(a==5){
     //5点になったら点滅して全部消すコード
-    for(int k=0;k<10;i++){
-      rep(l,5)digitalWrite(l,LOw);
+    for(int k=0;k<10;k++){
+      for(int l=0;5<10;l++)digitalWrite(l,LOw);
       delay(60);
-      rep(l,5)digitalWrite(l,HIGH);
+      for(int l=0;5<10;l++)digitalWrite(l,HIGH);
       delay(60);
     }
-    rep(l,5)digitalWrite(l,LOw);
-    rep(l,5)digitalWrite(l+4,LOw);
+    for(int l=0;5<10;l++)digitalWrite(l,LOw);
+    for(int l=0;5<10;l++)digitalWrite(l+4,LOw);
   }
   if(b==5){
     //5点になったら点滅して全部消すコード
-    for(int k=0;k<10;i++){
-      rep(l,5)digitalWrite(l+4,LOw);
+    for(int k=0;k<10;k++){
+      for(int l=0;5<10;l++)digitalWrite(l+4,LOw);
       delay(60);
-      rep(l,5)digitalWrite(l+4,HIGH);
+      for(int l=0;5<10;l++)digitalWrite(l+4,HIGH);
       delay(60);
     }
-    rep(l,5)digitalWrite(l,LOw);
-    rep(l,5)digitalWrite(l+4,LOw);
+    for(int l=0;5<10;l++)digitalWrite(l,LOw);
+    for(int l=0;5<10;l++)digitalWrite(l+4,LOw);
   }
   delay(1);
 }
